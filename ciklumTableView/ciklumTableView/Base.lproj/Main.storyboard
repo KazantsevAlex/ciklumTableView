@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="wKP-fM-x7d">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="DyA-nr-5wT">
+            <objects>
+                <viewController id="wKP-fM-x7d" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mmg-ho-6E9"/>
+                        <viewControllerLayoutGuide type="bottom" id="bk5-QD-rqD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="39x-5I-8B1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your Zombie Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PP5-oK-7GN">
+                                <rect key="frame" x="20" y="52" width="280" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="50V-jk-BHs">
+                                <rect key="frame" x="0.0" y="159" width="320" height="409"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QyJ-vz-jXG">
+                                <rect key="frame" x="88" y="90" width="144" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="8cK-Ia-lpJ"/>
+                                </constraints>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveZombie:" destination="wKP-fM-x7d" eventType="touchUpInside" id="Gc9-vn-GL1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QyJ-vz-jXG" firstAttribute="centerX" secondItem="50V-jk-BHs" secondAttribute="centerX" id="JtG-Ks-wTD"/>
+                            <constraint firstItem="50V-jk-BHs" firstAttribute="leading" secondItem="39x-5I-8B1" secondAttribute="leading" id="K2G-v9-YCE"/>
+                            <constraint firstAttribute="trailing" secondItem="50V-jk-BHs" secondAttribute="trailing" id="LAp-Zq-zNF"/>
+                            <constraint firstItem="QyJ-vz-jXG" firstAttribute="centerX" secondItem="PP5-oK-7GN" secondAttribute="centerX" id="Mj6-ir-Cbg"/>
+                            <constraint firstItem="PP5-oK-7GN" firstAttribute="top" secondItem="mmg-ho-6E9" secondAttribute="bottom" constant="32" id="NJV-BS-8Zb"/>
+                            <constraint firstItem="50V-jk-BHs" firstAttribute="bottom" secondItem="bk5-QD-rqD" secondAttribute="top" id="UBS-YM-a6e"/>
+                            <constraint firstItem="QyJ-vz-jXG" firstAttribute="leading" secondItem="39x-5I-8B1" secondAttribute="leadingMargin" constant="72" id="V4X-rI-t24"/>
+                            <constraint firstItem="QyJ-vz-jXG" firstAttribute="top" secondItem="PP5-oK-7GN" secondAttribute="bottom" constant="8" symbolic="YES" id="Ziu-Lj-9n5"/>
+                            <constraint firstItem="PP5-oK-7GN" firstAttribute="leading" secondItem="39x-5I-8B1" secondAttribute="leadingMargin" constant="4" id="tSx-3t-kaz"/>
+                            <constraint firstItem="50V-jk-BHs" firstAttribute="top" secondItem="QyJ-vz-jXG" secondAttribute="bottom" constant="22" id="yEg-Ha-viY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="saveZombieButton" destination="QyJ-vz-jXG" id="qea-0k-wH2"/>
+                        <outlet property="tableWithZombie" destination="50V-jk-BHs" id="UNm-ii-b4f"/>
+                        <outlet property="zombieNameField" destination="PP5-oK-7GN" id="3DP-3M-g0V"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="atz-uC-6Mj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-175" y="-262"/>
+        </scene>
+    </scenes>
+</document>
